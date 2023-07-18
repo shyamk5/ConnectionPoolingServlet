@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<display-name>DBPoolApp</display-name>
+
+	<servlet>
+		<servlet-name>cust</servlet-name>
+		<servlet-class>com.sk.servlet.CustomerRegistrationServlet</servlet-class>
+		
+		<init-param>
+			<param-name>jndi</param-name>
+			<param-value>java:/comp/env/DsJndi</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cust</servlet-name>
+		<url-pattern>/custurl</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>cust_reg.html</welcome-file>
+	</welcome-file-list>
+</web-app>
